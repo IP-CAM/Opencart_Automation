@@ -181,10 +181,10 @@ exports.config = {
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
     before: function () {
-    let {use, assert} = require("chai");
+    let {use, expect} = require("chai");
     let chaiWebdriver = require('chai-webdriverio').default;
     use(chaiWebdriver(browser));
-    global.assert = assert;
+    global.expect = expect;
     },
     /**
      * Runs before a WebdriverIO command gets executed.
