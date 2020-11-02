@@ -4,7 +4,7 @@
   "description": "Practice automation OpenCart Page",
   "main": "index.js",
   "scripts": {
-    "test": "npx run wdio wdio.conf.js"
+    "test": "npx wdio run wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "@wdio/spec-reporter": "^6.7.0",
     "@wdio/sync": "^6.7.2",
     "chai": "^4.2.0",
+    "chai-webdriverio": "^1.0.0",
     "webdriverio": "^6.7.2"
   }
 }
