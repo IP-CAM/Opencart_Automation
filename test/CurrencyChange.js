@@ -25,4 +25,5 @@ describe("Currency changes on the page", () => {
         homepage.selectOptionDropdownlistCurrency("3");
         expect(homepage.getPriceBoxText()).to.include('$');
     });
+
 })
