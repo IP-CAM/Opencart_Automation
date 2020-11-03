@@ -11,7 +11,7 @@
 
 -Before run the automation, It's necessary to download the dependencies using the command on the console: 
 ```
-node install
+npm install
 ```
 
 

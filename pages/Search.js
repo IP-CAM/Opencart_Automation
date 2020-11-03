@@ -1,9 +1,11 @@
 class Search {
 
-    get resultSearchList() { return $("#content > div:nth-child(8)") }
+    get messageNotProductFound() {return $("#content > p:nth-child(7)")}
 
     getTitle() { return browser.getTitle(); }
+    
+    getMessageNotProductFound(){ return this.messageNotProductFound.getText();}
 
 }
 
-module.exports = new Search()
+module.exports = new Search();

@@ -9,10 +9,15 @@ describe("search products with the search bar", () => {
         browser.setWindowSize(1920, 1080);
     });
 
-    it("search a product", () => {
+    it("search a existing product ", () => {
         var word = "mac";
         homepage.search(word);
         expect(search.getTitle()).to.equal(`Search - ${word}`);
+    })
+
+    it("search a not existing product", () => {
+        homepage.search("");
+        expect(search.getMessageNotProductFound()).to.equal("There is no product that matches the search criteria.");
     })
 
 });
