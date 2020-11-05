@@ -1,10 +1,12 @@
+let { getElementText, getPageTitle } = require("../common/Utilities");
+
 class Search {
 
-    get messageNotProductFound() {return $("#content > p:nth-child(7)")}
+    get messageNotProductFound() { return $("#content > p:nth-child(7)") }
 
-    getTitle() { return browser.getTitle(); }
-    
-    getMessageNotProductFound(){ return this.messageNotProductFound.getText();}
+    getTitle() { return getPageTitle(); }
+
+    getMessageNotProductFound() { return getElementText(this.messageNotProductFound); }
 
 }
 
