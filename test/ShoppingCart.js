@@ -16,8 +16,8 @@ describe("Shopping cart module", () => {
         expect(shoppingCart.verifyShoppingCartHasProduct()).to.be.true;
     });
 
-    it.skip("Check the product added on the shopping cart is the right product", () => {
-
+    it("Check the product added on the shopping cart is the right product", () => {
+        expect(shoppingCart.getTitleProductHome()).to.equal(shoppingCart.getTittleProductShoppingCart());
     });
 
 

@@ -14,6 +14,9 @@ class Home {
 
     clickDropdownlistCurrency() { clickElement(this.dropdownlistCurrency); }
 
+    /**
+    * @param {string} numberOption number of the potition of the option on the dropdown List
+    */
     selectOptionDropdownlistCurrency(numberOption) {
         var option = $(`#form-currency > div > ul > li:nth-child(${numberOption}) > button`);
         clickElement(option);
@@ -21,6 +24,9 @@ class Home {
 
     getPriceBoxText() { return getElementText(this.priceBox); }
 
+    /**
+    * @param {string} word value to be written on the element
+    */
     search(word) {
         setElementValue(this.searchBar, word);
         clickElement(this.searchBtn);

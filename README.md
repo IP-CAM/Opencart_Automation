@@ -1,4 +1,4 @@
-# OpenCart_Automation
+# OpenCart Automation
 ### Automation practice of the [OpenCart page.](http://opencart.abstracta.us/)
 
 ## Technologies

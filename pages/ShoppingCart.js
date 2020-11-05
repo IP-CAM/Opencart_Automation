@@ -19,7 +19,7 @@ class ShoppingCart {
 
     getTitleProductHome() { return getElementText(this.titleProductHome); }
 
-    getTittleProductShoppingCart() { return getElementText(this.tittleProductShoppingCart); }
+    getTittleProductShoppingCart() { return getElementText(this.titleProductShoppingCart); }
 }
 
 module.exports = new ShoppingCart();
