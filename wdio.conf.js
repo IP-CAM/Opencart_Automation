@@ -23,8 +23,12 @@ exports.config = {
     //Define specific suites
     suites: {
        register: [
-            './test/Register.Success.js',
-            './test/Register.Fail.js'
+            './test/Register/Register.Success.js',
+            './test/Register/Register.Fail.js'
+        ],
+        login: [
+            './test/Login/Login.Success.js',
+            './test/Login/Login.Fail.js'
         ]
     },
 

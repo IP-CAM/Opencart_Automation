@@ -39,6 +39,11 @@ class Utilities {
     * @param {number} height the height that the windows will take
     */
     setWindowsSize(width, height) { browser.setWindowSize(width, height); }
+
+    /**
+    * @param {WebdriverIO.Element} element webdriverIO Element
+    */
+    clearInput(element) { element.clearValue(); }
 }
 
 module.exports = new Utilities();

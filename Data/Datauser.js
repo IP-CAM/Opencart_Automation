@@ -14,6 +14,11 @@ class DataUser {
         password: chance.string()
     };
     
+    dataUserLogin = {
+        email: 'prueba@yopmail.com',
+        password: 'prueba123'
+    }
+
 }
 
 module.exports = new DataUser();

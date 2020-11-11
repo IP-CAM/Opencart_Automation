@@ -1,5 +1,5 @@
-let {setWindowsSize} = require("../common/Utilities");
-let register = require("../pages/Register");
+let {setWindowsSize} = require("../../common/Utilities");
+let register = require("../../pages/Register");
 
 describe("Register module Failed", () => {
 

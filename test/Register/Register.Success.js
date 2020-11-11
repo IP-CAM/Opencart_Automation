@@ -4,7 +4,7 @@ let register = require("../pages/Register");
 let successRegister = require("../pages/SuccessRegister");
 
 
-describe("Register module Sucess", () => {
+describe("Register module Success", () => {
 
     before(() => {
         register.gotoRegister();
