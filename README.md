@@ -6,6 +6,7 @@
 2. WebdriverIO
 3. Chai
 4. Mocha
+5. Chance
 
 ## Notes
 
