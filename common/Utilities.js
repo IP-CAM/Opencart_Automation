@@ -25,9 +25,7 @@ class Utilities {
         return element.isExisting();
     }
 
-    getPageTitle() {
-        return browser.getTitle();
-    }
+    getPageTitle() { return browser.getTitle(); }
     /**
     * @param {WebdriverIO.Element} element webdriverIO Element
     * @param {string} word value to be written on the element
@@ -36,7 +34,11 @@ class Utilities {
         element.waitForDisplayed();
         element.setValue(word);
     }
-
+    /**
+    * @param {number} width the width that the windows will take
+    * @param {number} height the height that the windows will take
+    */
+    setWindowsSize(width, height) { browser.setWindowSize(width, height); }
 }
 
 module.exports = new Utilities();

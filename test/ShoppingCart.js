@@ -1,4 +1,4 @@
-const { expect } = require("chai");
+let {setWindowsSize} = require("../common/Utilities");
 let homepage = require("../pages/Home");
 let shoppingCart = require("../pages/ShoppingCart");
 
@@ -7,7 +7,7 @@ describe("Shopping cart module", () => {
 
     before(() => {
         homepage.goToHome();
-        browser.setWindowSize(1920, 1080);
+        setWindowsSize(1920, 1080);
     })
 
     it("Add a product", () => {
