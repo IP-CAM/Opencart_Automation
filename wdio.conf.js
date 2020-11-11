@@ -19,6 +19,15 @@ exports.config = {
     specs: [
         './test/**/*.js'
     ],
+
+    //Define specific suites
+    suites: {
+       register: [
+            './test/Register.Success.js',
+            './test/Register.Fail.js'
+        ]
+    },
+
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
@@ -185,7 +194,7 @@ exports.config = {
         let chaiWebdriver = require('chai-webdriverio').default;
         use(chaiWebdriver(browser));
         global.expect = expect;
-       
+
     },
     /**
      * Runs before a WebdriverIO command gets executed.

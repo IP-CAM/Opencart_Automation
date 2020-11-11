@@ -17,7 +17,9 @@ class Register {
     get confirmPasswdInput() { return $("#input-confirm"); }
     get checkboxPrivacyPolicy() { return $("#content > form > div > div > input[type=checkbox]:nth-child(2)"); }
     get continueBtn() { return $("#content > form > div > div > input.btn.btn-primary"); }
-    get classTextmessageError() {return $(".text-danger");}
+    get classTextmessageError() { return $(".text-danger"); }
+    get registerBtn() { return $("#top-links > ul > li.dropdown.open > ul > li:nth-child(1) > a"); }
+    get myAccountBtn() { return $("#top-links > ul > li.dropdown > a > span.hidden-xs.hidden-sm.hidden-md"); }
 
     gotoRegister() { goToUrl("/index.php?route=account/register"); }
 
@@ -76,12 +78,16 @@ class Register {
      * */
     setValueConfirmPassword(password) { setElementValue(this.confirmPasswdInput, password); }
 
-    clickCheckBoxAgreePrivacyPolicy() {clickElement(this.checkboxPrivacyPolicy);}
+    clickCheckBoxAgreePrivacyPolicy() { clickElement(this.checkboxPrivacyPolicy); }
 
     clickContinueBtn() { clickElement(this.continueBtn); }
 
-    verifyPageHasMessageError() { return verifyElementExist(this.classTextmessageError);}
+    verifyPageHasMessageError() { return verifyElementExist(this.classTextmessageError); }
 
+    clickRegisterBtn() {
+        clickElement(this.myAccountBtn);
+        clickElement(this.registerBtn);
+    }
 }
 
 module.exports = new Register();

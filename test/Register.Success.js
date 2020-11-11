@@ -1,10 +1,10 @@
-let dataUser = require("../Data/Datauser");
+let dataUser = require("../data/Datauser");
 let {setWindowsSize} = require("../common/Utilities");
 let register = require("../pages/Register");
 let successRegister = require("../pages/SuccessRegister");
 
 
-describe("Register module", () => {
+describe("Register module Sucess", () => {
 
     before(() => {
         register.gotoRegister();
@@ -27,13 +27,5 @@ describe("Register module", () => {
         register.clickContinueBtn();
         expect(successRegister.getTextSuccessMessage()).to.equal("Your Account Has Been Created!");
     });
-
-    it("Register a user with empty fields", ()=>{
-        register.gotoRegister();
-        register.clickCheckBoxAgreePrivacyPolicy();
-        register.clickContinueBtn();
-        expect(register.verifyPageHasMessageError()).to.be.true;
-    });
-
 
 });
