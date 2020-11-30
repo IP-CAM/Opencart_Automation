@@ -3,7 +3,7 @@ let {setWindowsSize} = require("../../common/Utilities");
 let login = require("../../pages/Login");
 let myAccount = require("../../pages/MyAccount");
 
-describe("Login Sucess", () => {
+describe("Login Success", () => {
 
     before(()=>{
         login.goToLogin();
