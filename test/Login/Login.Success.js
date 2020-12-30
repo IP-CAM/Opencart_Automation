@@ -1,5 +1,5 @@
 let dataUser = require("../../data/Datauser");
-let {setWindowsSize} = require("../../common/Utilities");
+let utilities = require("../../common/Utilities");
 let login = require("../../pages/Login");
 let myAccount = require("../../pages/MyAccount");
 
@@ -7,7 +7,7 @@ describe("Login Success", () => {
 
     before(()=>{
         login.goToLogin();
-        setWindowsSize(1920,1080);
+        utilities.setWindowsSize(1920,1080);
     });
 
     it("Login with a user", () => {
