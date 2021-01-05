@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Arliin23/OpenCart_Automation#readme",
   "devDependencies": {
     "@wdio/cli": "^6.10.11",
+    "@wdio/junit-reporter": "^6.11.0",
     "@wdio/local-runner": "^6.10.13",
     "@wdio/mocha-framework": "^6.10.11",
     "@wdio/selenium-standalone-service": "^6.10.11",
