@@ -1,8 +1,8 @@
-let { getPageTitle } = require("../common/Utilities");
+let utilities = require("../common/Utilities");
 
 class MyAccount {
 
-    getTitle() { return getPageTitle(); }
+    getTitle() { return utilities.getPageTitle(); }
 
 }
 

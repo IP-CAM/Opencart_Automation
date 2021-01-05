@@ -1,11 +1,11 @@
-let {setWindowsSize} = require("../../common/Utilities");
+let utilities = require("../../common/Utilities");
 let register = require("../../pages/Register");
 
 describe("Register module Failed", () => {
 
     before(() => {
         register.gotoRegister();
-        setWindowsSize(1980,1080);
+        utilities.setWindowsSize(1980,1080);
     });
 
     it("Register a user with empty fields", ()=>{

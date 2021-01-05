@@ -1,4 +1,4 @@
-let { clickElement, getElementText, goToUrl, setElementValue } = require("../common/Utilities");
+let utilities = require("../common/Utilities");
 
 class Home {
 
@@ -9,30 +9,30 @@ class Home {
     get addToCartBtn() { return $("#content > div.row > div:nth-child(1) > div > div.button-group > button:nth-child(1) > span") }
 
     goToHome() {
-        goToUrl("/");
+        utilities.goToUrl("/");
     }
 
-    clickDropdownlistCurrency() { clickElement(this.dropdownlistCurrency); }
+    clickDropdownlistCurrency() { utilities.clickElement(this.dropdownlistCurrency); }
 
     /**
     * @param {string} numberOption number of the potition of the option on the dropdown List
     */
     selectOptionDropdownlistCurrency(numberOption) {
         var option = $(`#form-currency > div > ul > li:nth-child(${numberOption}) > button`);
-        clickElement(option);
+        utilities.clickElement(option);
     }
 
-    getPriceBoxText() { return getElementText(this.priceBox); }
+    getPriceBoxText() { return utilities.getElementText(this.priceBox); }
 
     /**
     * @param {string} word value to be written on the element
     */
     search(word) {
-        setElementValue(this.searchBar, word);
-        clickElement(this.searchBtn);
+        utilities.setElementValue(this.searchBar, word);
+        utilities.clickElement(this.searchBtn);
     }
 
-    clickAddToCartBtn() { clickElement(this.addToCartBtn); }
+    clickAddToCartBtn() { utilities.clickElement(this.addToCartBtn); }
 
 }
 

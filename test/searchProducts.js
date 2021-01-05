@@ -1,4 +1,4 @@
-let {setWindowsSize} = require("../common/Utilities");
+let utilities = require("../common/Utilities");
 let homepage = require("../pages/Home");
 let search = require("../pages/Search");
 
@@ -6,7 +6,7 @@ describe("search products with the search bar", () => {
 
     before(() => {
         homepage.goToHome();
-        setWindowsSize(1920, 1080);
+        utilities.setWindowsSize(1920, 1080);
     });
 
     it("search a existing product ", () => {

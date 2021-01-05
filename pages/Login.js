@@ -1,4 +1,4 @@
-let { goToUrl, setElementValue, clickElement, getElementText } = require("../common/Utilities");
+let utilities = require("../common/Utilities");
 
 class Login {
 
@@ -7,20 +7,20 @@ class Login {
     get loginBtn() { return $("#content > div > div:nth-child(2) > div > form > input"); }
     get messageWarning() { return $("body > div:nth-child(4) > div.alert.alert-danger"); }
 
-    goToLogin() { goToUrl("/index.php?route=account/login"); }
+    goToLogin() { utilities.goToUrl("/index.php?route=account/login"); }
 
     /**
      * @param {string} email email of the user  
      * */
-    setValueEmailInput(email) { setElementValue(this.emailInput, email); }
+    setValueEmailInput(email) { utilities.setElementValue(this.emailInput, email); }
     /**
      * @param {string} password the password of the user  
      * */
-    setValuePassword(password) { setElementValue(this.passwordInput, password); }
+    setValuePassword(password) { utilities.setElementValue(this.passwordInput, password); }
 
-    clickLoginBtn() { clickElement(this.loginBtn); }
+    clickLoginBtn() { utilities.clickElement(this.loginBtn); }
 
-    getTextMessageWarning() { return getElementText(this.messageWarning); }
+    getTextMessageWarning() { return utilities.getElementText(this.messageWarning); }
 
 }
 

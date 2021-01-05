@@ -1,4 +1,4 @@
-let {setWindowsSize} = require("../common/Utilities");
+let utilities = require("../common/Utilities");
 let homepage = require("../pages/Home");
 let shoppingCart = require("../pages/ShoppingCart");
 
@@ -7,7 +7,7 @@ describe("Shopping cart module", () => {
 
     before(() => {
         homepage.goToHome();
-        setWindowsSize(1920, 1080);
+        utilities.setWindowsSize(1920, 1080);
     })
 
     it("Add a product", () => {

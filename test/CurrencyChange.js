@@ -1,11 +1,11 @@
-let {setWindowsSize} = require("../common/Utilities");
+let utilities = require("../common/Utilities");
 let homepage = require("../pages/Home");
 
 describe("Currency changes on the page", () => {
 
     before(() => {
         homepage.goToHome();
-        setWindowsSize(1920, 1080);
+        utilities.setWindowsSize(1920, 1080);
     });
 
     beforeEach(() => {

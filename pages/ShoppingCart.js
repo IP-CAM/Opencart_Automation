@@ -1,4 +1,4 @@
-let { getElementText, clickElement, verifyElementExist } = require("../common/Utilities");
+let utilities = require("../common/Utilities");
 
 class ShoppingCart {
 
@@ -9,17 +9,17 @@ class ShoppingCart {
     get titleProductHome() { return $("#content > div.row > div:nth-child(1) > div > div.caption > h4"); }
     get titleProductShoppingCart() { return $("#cart > ul > li:nth-child(1) > table > tbody > tr > td.text-left > a"); }
 
-    clickShoppingCartBtn() { clickElement(this.shoppingCartBtn); }
+    clickShoppingCartBtn() { utilities.clickElement(this.shoppingCartBtn); }
 
-    verifyShoppingCartHasProduct() { return verifyElementExist(this.tableProductShoppingCart); }
+    verifyShoppingCartHasProduct() { return utilities.verifyElementExist(this.tableProductShoppingCart); }
 
-    getTextMessageShoppingCartEmpty() { return getElementText(this.messageEmptyShoppingCart); }
+    getTextMessageShoppingCartEmpty() { return utilities.getElementText(this.messageEmptyShoppingCart); }
 
-    clickDeleteProductShoppingCartBtn() { clickElement(this.deleteProductShoppingCartBtn); }
+    clickDeleteProductShoppingCartBtn() { utilities.clickElement(this.deleteProductShoppingCartBtn); }
 
-    getTitleProductHome() { return getElementText(this.titleProductHome); }
+    getTitleProductHome() { return utilities.getElementText(this.titleProductHome); }
 
-    getTittleProductShoppingCart() { return getElementText(this.titleProductShoppingCart); }
+    getTittleProductShoppingCart() { return utilities.getElementText(this.titleProductShoppingCart); }
 }
 
 module.exports = new ShoppingCart();

@@ -1,7 +1,7 @@
-let dataUser = require("../../data/Datauser");
 let utilities = require("../../common/Utilities");
 let login = require("../../pages/Login");
 let myAccount = require("../../pages/MyAccount");
+let dataUser = require("../../Data/Datauser");
 
 describe("Login Success", () => {
 
@@ -11,8 +11,8 @@ describe("Login Success", () => {
     });
 
     it("Login with a user", () => {
-    login.setValueEmailInput(dataUser.dataUserLogin.email);
-    login.setValuePassword(dataUser.dataUserLogin.password);
+    login.setValueEmailInput(dataUser.getDataUserLogin().email);
+    login.setValuePassword(dataUser.getDataUserLogin().password);
     login.clickLoginBtn();
     expect(myAccount.getTitle()).to.equal("My Account");
     });
